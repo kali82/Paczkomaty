@@ -1,0 +1,45 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com
+             /xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+    <persistence-unit name="org.hibernate.jpa">
+
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+
+        <properties>
+            <property name = "hibernate.dialect"
+                      value="org.hibernate.dialect.MySQLDialect"/>
+
+            <property name = "hibernate.connection.driver_class"
+                      value="com.mysql.cj.jdbc.Driver"/>
+
+            <!-- Assume test is the database name -->
+
+            <property name = "hibernate.connection.url"
+                      value="jdbc:mysql://localhost:3306/paczkomat?useSSL=false
+                        &amp;useUnicode=true
+                        &amp;useJDBCCompliantTimezoneShift=true
+                        &amp;useLegacyDatetimeCode=false
+                        &amp;serverTimezone=UTC"/>
+
+            <property name = "hibernate.connection.username"
+                      value="root"/>
+
+            <property name="hibernate.current_session_context_class"
+                      value="thread"/>
+
+            <property name = "hibernate.connection.password"
+                      value="kalisz123" />
+
+            <property name="show_sql"
+                      value="true" />
+
+            <property name="hibernate.hbm2ddl.auto"
+                      value="update" />
+
+
+        </properties>
+    </persistence-unit>
+</persistence>
